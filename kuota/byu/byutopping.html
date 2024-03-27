@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Harga Pulsa dan Kuota</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .inactive {
+            color: #999;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .info-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Daftar Harga Pulsa dan Kuota</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Paket</th>
+                    <th>Harga</th>
+                    <th>Info</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rp 1.000 (Pulsa)</td>
+                    <td>Rp 2.000</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 1.000: Isi ulang pulsa sebesar Rp 1.000.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 2.000 (Pulsa)</td>
+                    <td>Rp 3.000</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 2.000: Isi ulang pulsa sebesar Rp 2.000.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 3.000 (Pulsa)</td>
+                    <td>Rp 4.000</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 3.000: Isi ulang pulsa sebesar Rp 3.000.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 5.000 (Pulsa)</td>
+                    <td>Rp 6.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 5.000: Isi ulang pulsa sebesar Rp 5.000 dengan bonus 500 MB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 10.000 (Pulsa)</td>
+                    <td>Rp 11.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 10.000: Isi ulang pulsa sebesar Rp 10.000 dengan bonus 1 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 20.000 (Pulsa)</td>
+                    <td>Rp 21.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 20.000: Isi ulang pulsa sebesar Rp 20.000 dengan bonus 2 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 25.000 (Pulsa)</td>
+                    <td>Rp 26.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 25.000: Isi ulang pulsa sebesar Rp 25.000 dengan bonus 2.5 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 30.000 (Pulsa)</td>
+                    <td>Rp 31.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 30.000: Isi ulang pulsa sebesar Rp 30.000 dengan bonus 3 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 35.000 (Pulsa)</td>
+                    <td>Rp 36.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 35.000: Isi ulang pulsa sebesar Rp 35.000 dengan bonus 3.5 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 40.000 (Pulsa)</td>
+                    <td>Rp 41.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 40.000: Isi ulang pulsa sebesar Rp 40.000 dengan bonus 4 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 50.000 (Pulsa)</td>
+                    <td>Rp 51.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 50.000: Isi ulang pulsa sebesar Rp 50.000 dengan bonus 5 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 60.000 (Pulsa)</td>
+                    <td>Rp 61.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 60.000: Isi ulang pulsa sebesar Rp 60.000 dengan bonus 6 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 70.000 (Pulsa)</td>
+                    <td>Rp 71.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 70.000: Isi ulang pulsa sebesar Rp 70.000 dengan bonus 7 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 75.000 (Pulsa)</td>
+                    <td>Rp 76.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 75.000: Isi ulang pulsa sebesar Rp 75.000 dengan bonus 7.5 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 80.000 (Pulsa)</td>
+                    <td>Rp 81.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 80.000: Isi ulang pulsa sebesar Rp 80.000 dengan bonus 8 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 85.000 (Pulsa)</td>
+                    <td>Rp 86.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 85.000: Isi ulang pulsa sebesar Rp 85.000 dengan bonus 8.5 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 90.000 (Pulsa)</td>
+                    <td>Rp 91.500</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 90.000: Isi ulang pulsa sebesar Rp 90.000 dengan bonus 9 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+                <tr>
+                    <td>Rp 100.000 (Pulsa)</td>
+                    <td>Rp 101.000</td>
+                    <td><button class="info-button" onclick="showInfo('Paket Pulsa 100.000: Isi ulang pulsa sebesar Rp 100.000 dengan bonus 10 GB kuota internet.')">Info</button></td>
+                    <td>Aktif</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Daftar Harga Pulsa dan Kuota</p>
+    </footer>
+
+    <script>
+        function showInfo(info) {
+            alert(info);
+        }
+    </script>
+</body>
+</html>
