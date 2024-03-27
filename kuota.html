@@ -6,185 +6,182 @@
   <title>Kuota</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-        body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-          background-color: #f4f4f4; /* Warna latar belakang keseluruhan */
-        }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      overflow: hidden; /* Mencegah pengguna untuk melakukan geser (scroll) */
+    }
 
-        header {
-          color: #333; /* Warna teks header */
-          text-align: center;
-          padding: 20px 0;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk header */
-        }
+    header {
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        header h1 {
-          font-size: 3vw; /* Ukuran font responsif */
-          margin-bottom: 10px;
-          text-transform: uppercase;
-        }
+    header h1 {
+      font-size: 3vw;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
 
-        @keyframes slide {
-        0% { transform: translateX(100%); }
-        100% { transform: translateX(-100%); }
+    @keyframes slide {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
     .scrolling-text {
-        white-space: nowrap;
-        overflow: hidden;
-        position: relative;
-        animation: slide 20s linear infinite;
-        background-color: #f2f2f2; /* Warna latar belakang */
-        padding: 10px; /* Tambahkan padding untuk memberi jarak dari teks */
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
+      animation: slide 20s linear infinite;
+      background-color: #f2f2f2;
+      padding: 10px;
     }
 
-    /* Ganti warna dan ukuran teks */
     .scrolling-text p {
-        color: #333; /* Warna teks */
-        font-size: 18px; /* Ukuran teks */
+      color: #333;
+      font-size: 18px;
     }
-    
 
-        nav {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 20px 0;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
 
-        .menu-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 2vw; /* Menggunakan persentase untuk responsif */
-          justify-content: center;
-        }
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2vw;
+      justify-content: center;
+    }
 
-        .menu-item {
-          width: 25%; /* Menggunakan persentase untuk responsif */
-          height: 150px;
-          background-color: #fff; /* Warna latar belakang kotak menu */
-          border-radius: 10px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          transition: all 0.3s ease; /* Animasi perubahan */
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk kotak menu */
-        }
+    .menu-item {
+      width: 25%;
+      height: 150px;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-        .menu-item:hover {
-          transform: translateY(-5px); /* Efek mengangkat sedikit saat hover */
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih tegas saat hover */
-        }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-        .menu-item img {
-          width: 30%;
-          height: auto; /* Menggunakan persentase untuk responsif */
-          margin-bottom: 5%;
-        }
+    .menu-item img {
+      width: 30%;
+      height: auto;
+      margin-bottom: 5%;
+    }
 
-        .menu-item p {
-          margin: 0;
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 2vw; /* Ukuran font responsif */
-        }
+    .menu-item p {
+      margin: 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2vw;
+    }
 
-        .price-list {
-          max-width: 90vw; /* Menggunakan persentase untuk responsif */
-          margin: 0 auto;
-          padding: 5%;
-          background-color: #fff; /* Warna latar belakang daftar harga */
-          border-radius: 10px;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk daftar harga */
-          margin-top: 5vw; /* Menggunakan vw untuk responsif */
-        }
+    .price-list {
+      max-width: 90vw;
+      margin: 0 auto;
+      padding: 5%;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-top: 5vw;
+    }
 
-        /* Tambahan CSS untuk efek hover pada menu */
-        .menu-item:hover {
-          transform: scale(1.05);
-          transition: transform 0.3s ease-in-out;
-        }
+    .menu-item:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
 
-        .telkomsel p {
-          color: #e60000; /* Warna teks untuk Telkomsel */
-        }
+    .telkomsel p {
+      color: #e60000;
+    }
 
-        .indosat p {
-          color: #ffef00; /* Warna teks untuk Indosat */
-        }
+    .indosat p {
+      color: #ffef00;
+    }
 
-        .smartfren p {
-          color: #f24646; /* Warna teks untuk Smartfren */
-        }
+    .smartfren p {
+      color: #f24646;
+    }
 
-        .byu p {
-          color: #00bfff; /* Warna teks untuk ByU */
-        }
+    .byu p {
+      color: #00bfff;
+    }
 
-        .tri p {
-          color: #020202; /* Warna teks untuk Tri */
-        }
+    .tri p {
+      color: #020202;
+    }
 
-        .xl p {
-          color: #002d59; /* Warna teks untuk XL */
-        }
+    .xl p {
+      color: #002d59;
+    }
 
-        .axis p {
-          color: #800080; /* Warna teks untuk Axis */
-        }
+    .axis p {
+      color: #800080;
+    }
 
-        /* Responsive */
-        @media screen and (max-width: 768px) {
-          .menu-container {
-            gap: 5vw; /* Ubah gap antara menu item */
-          }
-          header h1 {
-            font-size: 4vw; /* Ukuran font responsif */
-          }
-          header p {
-            font-size: 3vw; /* Ukuran font responsif */
-          }
-          .menu-item {
-            width: 40%; /* Menggunakan persentase untuk responsif */
-          }
-          .menu-item img {
-            width: 40%;
-          }
-          .menu-item p {
-            font-size: 3vw; /* Ukuran font responsif */
-          }
-          .price-list {
-            max-width: 80vw; /* Menggunakan persentase untuk responsif */
-            padding: 10%;
-          }
-        }
+    @media screen and (max-width: 768px) {
+      .menu-container {
+        gap: 5vw;
+      }
+      header h1 {
+        font-size: 4vw;
+      }
+      header p {
+        font-size: 3vw;
+      }
+      .menu-item {
+        width: 40%;
+      }
+      .menu-item img {
+        width: 40%;
+      }
+      .menu-item p {
+        font-size: 3vw;
+      }
+      .price-list {
+        max-width: 80vw;
+        padding: 10%;
+      }
+    }
 
-        @media screen and (max-width: 480px) {
-          header h1 {
-            font-size: 6vw; /* Ukuran font responsif */
-          }
-          header p {
-            font-size: 4vw; /* Ukuran font responsif */
-          }
-          .menu-item {
-            width: 70%; /* Menggunakan persentase untuk responsif */
-          }
-          .menu-item img {
-            width: 50%;
-          }
-          .menu-item p {
-            font-size: 4vw; /* Ukuran font responsif */
-          }
-          .price-list {
-            max-width: 90vw; /* Menggunakan persentase untuk responsif */
-            padding: 15%;
-          }
-        }
-    </style>
+    @media screen and (max-width: 480px) {
+      header h1 {
+        font-size: 6vw;
+      }
+      header p {
+        font-size: 4vw;
+      }
+      .menu-item {
+        width: 70%;
+      }
+      .menu-item img {
+        width: 50%;
+      }
+      .menu-item p {
+        font-size: 4vw;
+      }
+      .price-list {
+        max-width: 90vw;
+        padding: 15%;
+      }
+    }
+  </style>
 
 </head>
 <body>
@@ -192,7 +189,7 @@
     <h1>Daftar Harga Kuota</h1>
     <div class="scrolling-text">
       <p>Silahkan pilih operator terlebih dahulu</p>
-  </div>
+    </div>
   </header>
   
   <nav>
