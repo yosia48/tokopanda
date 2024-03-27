@@ -20,8 +20,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow-y: auto; /* Enable scrolling for the menu */
-      max-height: calc(100vh - 40px); /* Set maximum height for the menu */
     }
 
     .menu-item {
@@ -55,51 +53,29 @@
       font-size: 14px;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     }
+
+    /* Media query untuk menyesuaikan penempatan menu tergantung pada jumlah item */
+    @media screen and (max-height: 500px) {
+      .menu {
+        align-items: flex-start; /* Posisikan menu di bagian atas */
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="menu" id="menu">
-    <!-- Menu items will be dynamically added here -->
+  <div class="menu">
+    <div class="menu-item">
+      <h3>By.U Harian</h3>
+      <p>Paket internet harian</p>
+    </div>
+    <div class="menu-item">
+      <h3>By.U Bulanan</h3>
+      <p>Paket internet bulanan</p>
+    </div>
+    <div class="menu-item">
+      <h3>Kaget Topping</h3>
+      <p>Paket internet dengan bonus kaget</p>
+    </div>
   </div>
-
-  <script>
-    // Data menu
-    const menuItems = [
-      { title: "By.U Harian", description: "Paket internet harian" },
-      { title: "By.U Bulanan", description: "Paket internet bulanan" },
-      { title: "Kaget Topping", description: "Paket internet dengan bonus kaget" }
-      // Add more items as needed
-    ];
-
-    // Function to populate the menu
-    function populateMenu() {
-      const menuContainer = document.getElementById("menu");
-      menuItems.forEach(item => {
-        const menuItem = document.createElement("div");
-        menuItem.classList.add("menu-item");
-        menuItem.innerHTML = `
-          <h3>${item.title}</h3>
-          <p>${item.description}</p>
-        `;
-        menuContainer.appendChild(menuItem);
-      });
-    }
-
-    // Check if scrolling is needed based on the number of items
-    function checkScrolling() {
-      const menuContainer = document.getElementById("menu");
-      if (menuItems.length > 2) {
-        menuContainer.style.alignItems = "flex-start"; // Start from top if there are many items
-        menuContainer.style.overflowY = "auto"; // Enable scrolling
-      } else {
-        menuContainer.style.alignItems = "center"; // Center if there are few items
-        menuContainer.style.overflowY = "hidden"; // Disable scrolling
-      }
-    }
-
-    // Populate the menu and check scrolling on page load
-    populateMenu();
-    checkScrolling();
-  </script>
 </body>
 </html>
