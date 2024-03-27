@@ -11,7 +11,6 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
-      overflow: hidden; /* Mencegah pengguna untuk melakukan geser (scroll) */
     }
 
     header {
@@ -136,24 +135,34 @@
     }
 
     @media screen and (max-width: 768px) {
+      .scrolling-text p {
+        animation: none; /* Menonaktifkan animasi berjalan pada layar yang lebih kecil */
+      }
+
       .menu-container {
         gap: 5vw;
       }
+
       header h1 {
         font-size: 4vw;
       }
+
       header p {
         font-size: 3vw;
       }
+
       .menu-item {
         width: 40%;
       }
+
       .menu-item img {
         width: 40%;
       }
+
       .menu-item p {
         font-size: 3vw;
       }
+
       .price-list {
         max-width: 80vw;
         padding: 10%;
@@ -164,18 +173,23 @@
       header h1 {
         font-size: 6vw;
       }
+
       header p {
         font-size: 4vw;
       }
+
       .menu-item {
         width: 70%;
       }
+
       .menu-item img {
         width: 50%;
       }
+
       .menu-item p {
         font-size: 4vw;
       }
+
       .price-list {
         max-width: 90vw;
         padding: 15%;
