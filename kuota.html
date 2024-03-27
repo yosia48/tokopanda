@@ -11,6 +11,7 @@
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
+      overflow-x: hidden; /* Menghilangkan horizontal scroll */
     }
 
     header {
@@ -18,12 +19,15 @@
       text-align: center;
       padding: 20px 0;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden; /* Mencegah konten keluar dari header */
     }
 
     header h1 {
       font-size: 3vw;
       margin-bottom: 10px;
       text-transform: uppercase;
+      white-space: nowrap; /* Menghindari wrapping tulisan */
+      overflow: hidden; /* Mencegah konten keluar dari header */
     }
 
     @keyframes slide {
