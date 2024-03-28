@@ -18,7 +18,7 @@
 
   .wrapper-card {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin: 40px auto;
     width: 90%;
     justify-content: center;
@@ -64,6 +64,8 @@
     padding: 15px;
     height: 80px;
     text-decoration: none; /* Added to remove underline */
+    display: block;
+    width: 100%;
   }
 
   .popular .card-action button:hover {
@@ -194,6 +196,13 @@
     box-shadow: 0 2px 4px #196090;
     color: #fff;
     font-size: 17px;
+  }
+
+  /* Media Query for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%; /* Set card width to 100% on smaller screens */
+    }
   }
 </style>
 </head>
