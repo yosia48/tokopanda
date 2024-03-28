@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulsa</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4; /* Warna latar belakang keseluruhan */
+        }
+
+        header {
+          color: #333; /* Warna teks header */
+          text-align: center;
+          padding: 20px 0;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk header */
+        }
+
+        header h1 {
+          font-size: 3vw; /* Ukuran font responsif */
+          margin-bottom: 10px;
+          text-transform: uppercase;
+        }
+
+        @keyframes slide {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+
+    .scrolling-text {
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        animation: slide 20s linear infinite;
+        background-color: #f2f2f2; /* Warna latar belakang */
+        padding: 10px; /* Tambahkan padding untuk memberi jarak dari teks */
+    }
+
+    /* Ganti warna dan ukuran teks */
+    .scrolling-text p {
+        color: #333; /* Warna teks */
+        font-size: 18px; /* Ukuran teks */
+    }
+    
+
+        nav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px 0;
+        }
+
+        .menu-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2vw; /* Menggunakan persentase untuk responsif */
+          justify-content: center;
+        }
+
+        .menu-item {
+          width: 25%; /* Menggunakan persentase untuk responsif */
+          height: 150px;
+          background-color: #fff; /* Warna latar belakang kotak menu */
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: all 0.3s ease; /* Animasi perubahan */
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk kotak menu */
+        }
+
+        .menu-item:hover {
+          transform: translateY(-5px); /* Efek mengangkat sedikit saat hover */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan yang lebih tegas saat hover */
+        }
+
+        .menu-item img {
+          width: 30%;
+          height: auto; /* Menggunakan persentase untuk responsif */
+          margin-bottom: 5%;
+        }
+
+        .menu-item p {
+          margin: 0;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 2vw; /* Ukuran font responsif */
+        }
+
+        .price-list {
+          max-width: 90vw; /* Menggunakan persentase untuk responsif */
+          margin: 0 auto;
+          padding: 5%;
+          background-color: #fff; /* Warna latar belakang daftar harga */
+          border-radius: 10px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan untuk daftar harga */
+          margin-top: 5vw; /* Menggunakan vw untuk responsif */
+        }
+
+        /* Tambahan CSS untuk efek hover pada menu */
+        .menu-item:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .telkomsel p {
+          color: #e60000; /* Warna teks untuk Telkomsel */
+        }
+
+        .indosat p {
+          color: #ffef00; /* Warna teks untuk Indosat */
+        }
+
+        .smartfren p {
+          color: #f24646; /* Warna teks untuk Smartfren */
+        }
+
+        .byu p {
+          color: #00bfff; /* Warna teks untuk ByU */
+        }
+
+        .tri p {
+          color: #020202; /* Warna teks untuk Tri */
+        }
+
+        .xl p {
+          color: #002d59; /* Warna teks untuk XL */
+        }
+
+        .axis p {
+          color: #800080; /* Warna teks untuk Axis */
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+          .menu-container {
+            gap: 5vw; /* Ubah gap antara menu item */
+          }
+          header h1 {
+            font-size: 4vw; /* Ukuran font responsif */
+          }
+          header p {
+            font-size: 3vw; /* Ukuran font responsif */
+          }
+          .menu-item {
+            width: 40%; /* Menggunakan persentase untuk responsif */
+          }
+          .menu-item img {
+            width: 40%;
+          }
+          .menu-item p {
+            font-size: 3vw; /* Ukuran font responsif */
+          }
+          .price-list {
+            max-width: 80vw; /* Menggunakan persentase untuk responsif */
+            padding: 10%;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          header h1 {
+            font-size: 6vw; /* Ukuran font responsif */
+          }
+          header p {
+            font-size: 4vw; /* Ukuran font responsif */
+          }
+          .menu-item {
+            width: 70%; /* Menggunakan persentase untuk responsif */
+          }
+          .menu-item img {
+            width: 50%;
+          }
+          .menu-item p {
+            font-size: 4vw; /* Ukuran font responsif */
+          }
+          .price-list {
+            max-width: 90vw; /* Menggunakan persentase untuk responsif */
+            padding: 15%;
+          }
+        }
+    </style>
+
+</head>
+<body>
+  <header>
+    <h1>Daftar Harga Pulsa</h1>
+    <div class="scrolling-text">
+      <p>Silahkan pilih operator terlebih dahulu</p>
+  </div>
+  </header>
+  
+  <nav>
+    <div class="menu-container">
+      <div class="menu-item telkomsel">
+        <img src="telkomsel-logo.png" alt="Telkomsel Logo">
+        <p>Telkomsel</p>
+      </div>
+      <div class="menu-item xl">
+        <img src="xl-logo.png" alt="XL Logo">
+        <p>XL</p>
+      </div>
+      <div class="menu-item indosat">
+        <img src="indosat-logo.png" alt="Indosat Logo">
+        <p>Indosat</p>
+      </div>
+      <div class="menu-item tri">
+        <img src="tri-logo.png" alt="Tri Logo">
+        <p>Tri</p>
+      </div>
+      <div class="menu-item smartfren">
+        <img src="smartfren-logo.png" alt="Smartfren Logo">
+        <p>Smartfren</p>
+      </div>
+      <div class="menu-item axis">
+        <img src="axis-logo.png" alt="Axis Logo">
+        <p>Axis</p>
+      </div>
+      <div class="menu-item byu">
+        <img src="byu-logo.png" alt="ByU Logo">
+        <p>ByU</p>
+      </div>
+    </div>
+  </nav>
+
+  <section class="price-list">
+    <!-- Isi daftar harga akan ditampilkan di sini -->
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
